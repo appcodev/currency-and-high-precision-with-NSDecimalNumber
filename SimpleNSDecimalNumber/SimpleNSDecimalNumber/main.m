@@ -23,7 +23,14 @@ int main(int argc, const char * argv[])
         
         NSLog(@"dc1:%@ | dc2:%@ | dc3:%@",dc1,dc2,dc3);
         
-        
+        NSDecimalNumber *d1 = [dc3 decimalNumberByAdding:dc2];
+        NSLog(@"= d1=%@ <> dc3=%@",d1,dc3);
+        NSDecimalNumber *d2 = [dc2 decimalNumberByDividingBy:dc1];
+        NSLog(@"= d2=%@ <> dc2=%@",d2,dc2);
+        NSDecimalNumber *d3 = [dc1 decimalNumberByMultiplyingBy:dc3];
+        NSLog(@"= d3=%@ <>  dc1=%@",d3,dc1);
+        NSDecimalNumber *d4 = [dc3 decimalNumberByDividingBy:dc3];
+        NSLog(@"= d4=%@ <>  dc3=%@",d4,dc3);
     }
     return 0;
 }
